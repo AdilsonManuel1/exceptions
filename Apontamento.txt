@@ -1,0 +1,114 @@
+Aulas de Dotnet!
+Passar no caderno por favor!
+
+No csharp pelo Vsisual Code, depois de abrir a pasta para criar um projeto.
+Rodamos, dotnet new console, isso se for para consele. 
+Caso desejamos ver os tipos de interface disponivel, podemos colocar, dotnet new
+
+Valor literal, quando é inserido direitamente no codigo
+Os tipos validos no csharp
+
+bool,char,byte,int,long,float,double,decimal,string
+
+Essa expressa mostra que usando o sinal de valor no principio
+podemos usar normalmente a váriavel
+
+Console.WriteLine($"Olá {name}");
+
+static void Main(string [] args)
+
+No Args pode ser qualquer nome, ele cria um array normal que pode ser acedido normalemte
+ Console.WriteLine(args[1]);
+no console coloca 
+dotnet run --primeiro segundo
+
+Para ler o Array até o final o texto é Lenght e não com menusculo
+
+Console.WriteLine(names[0]);
+        for(int i=0; i<names.Length; i++)
+        {
+            Console.WriteLine(names[i]);
+        }
+
+percorrer array com foreach
+
+
+Com o metodo abaixo, podes comparar letra maiuscula com menuscula
+
+ if(string.Equals(names[0], "adilson", StringComparison.OrdinalIgnoreCase))
+        {
+            Console.WriteLine("Iguais");
+        }
+
+
+Ver o Tamanho de caracter de uma String
+
+nomedaString.Length;
+
+Verificar se a String é nula ou vazia
+Console.WriteLine(string.IsNullOrEmpty(name));
+è possivel criar vários tipos de Opções de Acesso com isso.
+
+Retorna se a String é vazie se foi apenas preencchida com espaçoes em branco
+
+      Console.WriteLine(string.IsNullOrWhiteSpace(name));
+Muito Bom codigo 
+
+Juntar Caracteres...
+
+O codigo abaixo permite Juntar Caracteres
+
+string [] name ={"Adilson", "Manuel"};
+
+    Console.WriteLine(string.Join(" ",name));
+
+if(i is null) a mesma coisa que escrever if(i == null)
+ou if(i is not null)  if(i != null)
+
+Dados do tipo Anulavel
+
+int ? i =null;
+i = null;
+
+if(i == null)
+{
+Escreve uma mensagem
+}
+
+if(i is null)
+{
+Escrever codigo
+}
+if(i is not null)
+{
+Escrever codigo
+}
+
+Tipo de Referencia Anulaveis
+
+Quando o C# tenta usar um numero null 
+NullReferenceException
+Exemplo
+
+string nome = null;
+Console.WriteLine(nome.Length); // O normal é mostrar um erro, porque é um valor nullo e não podemos ver os numeros de caracter
+
+string? nome = null;
+Adicionar a String no csproj - <ImplicitUsings> enable</ImplicitUsings>
+
+
+Tratamento de Sessão, usando try catch
+
+// estudar mais Sobre try 
+
+    string nome=null;
+     try
+     {
+       Console.WriteLine(nome.Length);
+     }
+     catch(System.Exception)
+     {
+         Console.WriteLine("Erro aqui");
+      //  throw;
+     }
+

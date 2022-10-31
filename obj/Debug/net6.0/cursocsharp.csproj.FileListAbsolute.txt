@@ -1,0 +1,15 @@
+C:\Users\adilson.m\Documents\Documentos\cursocsharp\bin\Debug\net6.0\cursocsharp.exe
+C:\Users\adilson.m\Documents\Documentos\cursocsharp\bin\Debug\net6.0\cursocsharp.deps.json
+C:\Users\adilson.m\Documents\Documentos\cursocsharp\bin\Debug\net6.0\cursocsharp.runtimeconfig.json
+C:\Users\adilson.m\Documents\Documentos\cursocsharp\bin\Debug\net6.0\cursocsharp.dll
+C:\Users\adilson.m\Documents\Documentos\cursocsharp\bin\Debug\net6.0\cursocsharp.pdb
+C:\Users\adilson.m\Documents\Documentos\cursocsharp\obj\Debug\net6.0\cursocsharp.csproj.AssemblyReference.cache
+C:\Users\adilson.m\Documents\Documentos\cursocsharp\obj\Debug\net6.0\cursocsharp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\adilson.m\Documents\Documentos\cursocsharp\obj\Debug\net6.0\cursocsharp.AssemblyInfoInputs.cache
+C:\Users\adilson.m\Documents\Documentos\cursocsharp\obj\Debug\net6.0\cursocsharp.AssemblyInfo.cs
+C:\Users\adilson.m\Documents\Documentos\cursocsharp\obj\Debug\net6.0\cursocsharp.csproj.CoreCompileInputs.cache
+C:\Users\adilson.m\Documents\Documentos\cursocsharp\obj\Debug\net6.0\cursocsharp.dll
+C:\Users\adilson.m\Documents\Documentos\cursocsharp\obj\Debug\net6.0\refint\cursocsharp.dll
+C:\Users\adilson.m\Documents\Documentos\cursocsharp\obj\Debug\net6.0\cursocsharp.pdb
+C:\Users\adilson.m\Documents\Documentos\cursocsharp\obj\Debug\net6.0\cursocsharp.genruntimeconfig.cache
+C:\Users\adilson.m\Documents\Documentos\cursocsharp\obj\Debug\net6.0\ref\cursocsharp.dll

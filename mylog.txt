@@ -1,0 +1,254 @@
+Não é possivel depositar -25 na conta de Analtina
+Não é possivel depositar -25 na conta de Analtina
+Não é possivel depositar -25 na conta de Analtina
+Não é possivel depositar -25 na conta de Analtina
+Não é possivel depositar -25 na conta de Analtina
+Não é possivel depositar -25 na conta de Analtina
+Não é possivel depositar -25 na conta de Analtina
+Não é possivel depositar -25 na conta de Analtina
+Não é possivel depositar -25 na conta de Analtina
+Não é possivel depositar -25 na conta de Analtina
+Não é possivel depositar -25 na conta de Analtina
+
+
+        /*
+          Iloger logger = new FileLogger("mylog.txt");
+        BankAccount account1 = new BankAccount("Adilson", 5000, logger);
+
+        BankAccount account2 = new BankAccount("Analtina", 7000,logger);
+        List<BankAccount> accounts = new List<BankAccount>();
+
+        accounts.Add(account1);
+        accounts.Add(account2);
+
+        foreach(BankAccount account in accounts)
+        {
+            Console.WriteLine(account.Balance);
+        }
+        
+        account1.deposit(25);
+        account2.deposit(-25);
+
+        Console.WriteLine(account2.Balance);
+
+        DataStore<string> story = new DataStore<string>();
+        story.value ="Direitoria";
+        story.value ="Direitoria1";
+
+        // O codigo a baixo conta no numero de caracter na palavra, sem o length imprime o texto
+        Console.WriteLine(story.value.Length);
+
+    }
+
+
+// Classe DATASTORE
+
+    class DataStore<T>
+    {
+        public T value {get;set;}
+    }
+
+
+
+
+    // Closse ILOGER
+    class FileLogger:Iloger
+    {
+        private readonly string filepath;
+
+        public FileLogger(string filepath)
+        {
+            this.filepath = filepath;
+        }
+
+        public void Log(string message)
+        {
+            File.AppendAllText(filepath,$"{message}{Environment.NewLine}");
+
+            //File.AppendAllText("log.txt",$"{message}{Environment.NewLine}");
+        }
+    }
+
+    class ConsoleLogger :Iloger
+    {
+        public void Log(string mensage)
+        {
+          Console.WriteLine($"Logger {mensage}");
+        }
+
+    }
+
+    interface Iloger
+    {
+        void Log(string mensage);
+    }
+
+    class BankAccount
+    {
+       private string name;
+
+        private decimal balance;
+
+        private readonly Iloger logger;
+
+        public decimal Balance {
+            
+        get 
+        {
+            return balance;
+        }
+      private set{balance = value;}
+        
+        }
+
+        public BankAccount (string name, decimal balance,Iloger logger)
+        {
+            if(string.IsNullOrWhiteSpace(name)) // Aqui estou a dizer se o nome for branco ou ter apenas espaço
+            {
+                throw new ArgumentException("Nome invalido ",nameof(name));
+            }
+            if(balance<= 0)
+            {
+                
+                throw new ArgumentException("Saldo Invalido ",nameof(balance));
+            }
+
+            this.name =name;
+            Balance =balance;
+            this.logger =logger;
+        }
+
+            public void deposit(decimal amount)
+    {
+      /*  try
+        {
+        if(amount<=0)
+       {
+        Console.WriteLine("Tem Erro");
+       }
+
+        }
+        catch
+        {
+            throw new ArgumentException("Verifique o Valor Inserido",nameof(amount));
+        }
+        
+    
+        if(amount<=0)
+       {
+            logger.Log($"Não é possivel depositar {amount} na conta de {name}");
+       // throw new ArgumentException("Deposito Invalido", nameof(amount));
+       //return;
+       }
+       Balance += amount;
+            
+       
+
+    }
+    // Forma 1 de ter acesso ao saldo
+    /*
+
+    public decimal GetBalance()
+    {
+        return balance;
+    }
+
+
+        double nota1,nota2,nota3;
+
+        Console.WriteLine("Insira a primeira Nota: ");
+        nota1 = double.Parse(Console.ReadLine());
+
+         Console.WriteLine("Insira a Segunda Nota: ");
+        nota2 = double.Parse(Console.ReadLine());
+         Console.WriteLine("Insira a Terceira Nota: ");
+        nota3 = double.Parse(Console.ReadLine());
+    
+        double media =(nota1+nota2+nota3)/3;
+            Console.WriteLine("A Média",media);
+        if(media>= 7)
+        {
+            Console.WriteLine($"Aluno Aprovado com media {media}");
+        }else{
+            Console.WriteLine($"Aluno Reprovado com media {media}");
+        }
+
+
+    decimal SalarioFixo=3000, VtotalVenda=1500;
+    decimal comisao;
+    const decimal Comissao1 = 2000;
+    const decimal aumento1 = 0.05m;
+    const decimal aumento2 = 0.1m;
+
+
+        if(VtotalVenda>2000)
+        {
+            comisao =(VtotalVenda - Comissao1) * aumento2;
+            comisao +=(Comissao1 * aumento1);
+        }
+        else
+        {
+            comisao =(VtotalVenda *aumento1);
+        }
+    Console.WriteLine($" O Salário será {comisao + SalarioFixo}");
+    
+
+
+    List <string> nomes = new List<string>();
+    string nome;
+    
+    int escolha;
+ 
+   Console.WriteLine("=============== Menu Treino Alunos =========");
+    Console.WriteLine("1- Adicionar Nome ");
+    Console.WriteLine("2- Listar Nome ");
+    Console.WriteLine("0- Sair ");
+    escolha =int.Parse(Console.ReadLine());
+    
+
+
+ do{
+    Console.WriteLine("=============== Menu Treino Alunos =========");
+    Console.WriteLine("1- Adicionar Nome ");
+    Console.WriteLine("2- Listar Nome ");
+    Console.WriteLine("0- Sair ");
+    escolha =int.Parse(Console.ReadLine());
+      switch(escolha)
+    {
+        case 1:
+         try{
+            
+        Console.WriteLine("Insira Um nome: ");
+        nome = Console.ReadLine();
+       nomes.Add(nome);
+ 
+    }catch
+    {
+         throw new ArgumentException("Verifica o Valor Inserido");
+    }
+    break;
+    case 2:
+    foreach(string nomes1 in nomes)
+    {
+        Console.WriteLine(nomes1);
+    }
+   
+      break;
+    case 3:
+   break;
+    break;
+   
+        
+    }
+
+
+    }while(escolha!=0);
+
+  
+   
+   // idades.Add(nome);
+   // Console.WriteLine(idades[0]);
+        
+    }
+    */
+
